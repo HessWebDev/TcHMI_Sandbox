@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "TcHMI_Sandbox", "TcHMI_Sandbox\TcHMI_Sandbox.hmiproj", "{79C02024-CF75-43DA-8F23-C4A54A8F9ADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79C02024-CF75-43DA-8F23-C4A54A8F9ADD}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{79C02024-CF75-43DA-8F23-C4A54A8F9ADD}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{79C02024-CF75-43DA-8F23-C4A54A8F9ADD}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{79C02024-CF75-43DA-8F23-C4A54A8F9ADD}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0F1215E-5A96-4C78-BB4F-025FBAA9F930}
+	EndGlobalSection
+EndGlobal
