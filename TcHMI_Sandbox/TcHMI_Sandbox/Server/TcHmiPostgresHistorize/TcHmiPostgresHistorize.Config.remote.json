@@ -1,0 +1,8 @@
+{
+    "databaseSettings": {
+        "connectionString": "Server=localhost; Port=5432; Database=historize_postgres; Uid=postgres; Pwd=@{password};Timeout=10;",
+        "password": "",
+        "tableId": 1.0
+    },
+    "historizedSymbolList": {}
+}

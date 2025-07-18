@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{56d4d8e2-7f94-4868-8bfd-bb6b54137b6e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	
+bInit : BOOL := TRUE; 
+    bSend : BOOL := TRUE; 
+
+    fbMsg : FB_TcMessage; 
+	{attribute 'TcRpcEnable'} 
+	MOVE1 : BOOL;
+	
+	test : BOOL;
+	{ attribute 'TcHmiSymbol.AddSymbol' }
+_i       : INT;
+	
+	{ attribute 'TcHmiSymbol.AddSymbol' }
+	numericInputValue : INT;
+	
+	floattest : REAL;
+	dintTest : DINT;
+
+	realValue : REAL;
+	
+	a : INT;
+	
+	b : INT;
+	
+	BSOD : BOOL;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+    bInit := FALSE; 
+    fbMsg.CreateEx(TC_EVENTS.EventTest.Help, 0); 
+	fbMsg.CreateEx(TC_EVENTS.EventTest.Help2, 0);
+	//fbMsg.CreateEx(TC_EVENTS.EventTest.Help3, 0);
+END_IF
+
+IF bSend THEN 
+    bSend := FALSE; 
+    fbMsg.Send(0); 
+END_IF
+
+
+numericInputValue := 50;
+
+Batch();
+
+
+IF BSOD THEN 
+	numericInputValue := a/b;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

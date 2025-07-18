@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="Batch" Id="{93abd728-8348-4c10-abc2-b43479941c90}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Batch
+VAR
+	fbRunBat						: NT_StartProcess;
+	NT_StartProcess_Busy			: BOOL;
+	NT_StartProcess_Err				: BOOL;
+	NT_StartProcess_ErrId			: UDINT;
+	Tmout							: TIME;
+	bSuccess						: BOOL;
+	bBatFilePath					: T_MaxString;
+	sBatDirPath						: T_MaxString;
+	sBatCmdLine						: T_MaxString;
+	NT_Busy							: BOOL;
+	NT_Err							: BOOL;
+	NT_ErrID						: UDINT;
+	fbLocalAMSNetID					: FB_Getlocalamsnetid;
+	
+	
+
+
+	bCopyToUSB: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF 	fbRunBat.START AND NOT NT_Busy THEN 
+	bCopyToUSB := FALSE;
+	
+END_IF
+
+
+IF bCopyToUSB THEN 
+	fbLocalAmsnetID.bExecute := TRUE;
+	fbRunBat.NETID := '10.12.64.53.1.1';
+	fbRunBat.PATHSTR := 'C:\Users\Administrator\Desktop\test.bat';
+	fbRunBat.DIRNAME :='C:\Users\Administrator\Desktop';
+	fbRunBat.COMNDLINE := '';
+	fbRunBat.TMOUT := T#5S;
+	fbRunBat.START := TRUE;
+	NT_Busy := fbRunBat.BUSY;
+	NT_Err := fbRunBat.ERR;
+	NT_ErrID := fbRunBat.ERRID;
+	
+	
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

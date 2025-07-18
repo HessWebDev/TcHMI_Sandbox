@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<TcEventSources Version="2">
+	<Source>
+		<GUID>{EC89ED3C-EA2A-46C2-82AF-CA768E5AE4E7}</GUID>
+		<Name LcId="1033">NewEventClass_DisplayText</Name>
+		<Event>
+			<Id>1</Id>
+			<Message LcId="1033">I need help, this is a warning..</Message>
+		</Event>
+		<Event>
+			<Id>2</Id>
+			<Message LcId="1033">I need help, this is an error..</Message>
+		</Event>
+		<Event>
+			<Id>3</Id>
+			<Message LcId="1033">I need help, this is a verbose</Message>
+		</Event>
+	</Source>
+</TcEventSources>

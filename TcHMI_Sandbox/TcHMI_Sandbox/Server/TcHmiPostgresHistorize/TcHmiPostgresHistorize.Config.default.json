@@ -1,0 +1,11 @@
+{
+    "compressAfter": "P30D",
+    "compressionScheduleInterval": "P30D",
+    "databaseSettings": {
+        "connectionString": "Server=localhost; Port=5432; Database=Test; Uid=postgres; Pwd=1;Timeout=10;",
+        "password": "",
+        "tableId": 0.0
+    },
+    "enableCompression": false,
+    "historizedSymbolList": {}
+}
